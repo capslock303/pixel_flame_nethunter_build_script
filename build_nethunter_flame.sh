@@ -23,13 +23,13 @@ echo "[*] Updating packages and installing dependencies..."
 sudo apt-get update
 sudo apt-get install -y \
     build-essential bc bison flex libssl-dev \
-    ccache git zip unzip automake autoconf libncurses5-dev \
-    libncursesw5-dev clang libclang-dev lld \
+    ccache git zip unzip automake autoconf libncurses-dev \
+    clang libclang-dev lld \
     python3 python3-pip wget curl sed grep cpio \
-    libz4-dev device-tree-compiler xz-utils
+    liblz4-dev device-tree-compiler xz-utils
 
 # NetHunter build script dependencies:
-sudo apt-get install -y default-jdk python3-tqdm python3-crypto
+sudo apt-get install -y default-jdk python3-tqdm python3-pycryptodome
 
 # Create a workspace
 WORKDIR="${HOME}/nethunter_flame_build"
